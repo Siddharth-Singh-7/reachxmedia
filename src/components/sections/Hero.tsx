@@ -60,10 +60,9 @@ const influencers = [
   },
   {
     name: 'Sid Upadhyay',
-    followers: '30K+ Followers',
+    followers: '16.6K Followers',
     image: '/Sid%20Upadhyay.png',
     height: 'h-[240px] sm:h-[280px] md:h-[320px]',
-    platform: 'linkedin',
   },
 ];
 
@@ -72,7 +71,7 @@ const col2 = [...influencers.slice(4), ...influencers.slice(0, 4)];
 
 export const Hero = () => {
   return (
-    <section className="relative flex items-center overflow-hidden py-12 lg:min-h-screen lg:py-20">
+    <section className="relative flex items-center overflow-hidden py-20 lg:min-h-screen lg:py-20 pt-24 lg:pt-20">
       {/* Elegant floating shapes background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-primary/[0.05] blur-3xl pointer-events-none" />
       <ElegantShape delay={0.3} width={500} height={120} rotate={12} gradient="from-primary/[0.12]" className="left-[-5%] top-[20%]" />
@@ -113,21 +112,51 @@ export const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Mobile photo grid - 2 columns, fixed height, shown only below lg */}
-          <div className="lg:hidden w-full grid grid-cols-2 gap-3 mt-4">
-            {influencers.slice(0, 6).map((person, i) => (
-              <div key={i} className="relative rounded-2xl overflow-hidden h-[160px] border border-primary/10">
-                <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                <div className="absolute bottom-2 left-2 right-2">
-                  <div className="flex items-center gap-1 mb-0.5">
-                    <img src={person.platform === 'linkedin' ? '/linkedin.png' : '/instas.png'} alt={person.platform === 'linkedin' ? 'LinkedIn' : 'Instagram'} className="w-7 h-7 rounded object-contain" />
-                    <span className="text-[9px] font-medium text-white/80">{person.followers}</span>
+          {/* Mobile photo grid - 2 animated columns, shown only below lg */}
+          <div className="lg:hidden w-full relative h-[420px] overflow-hidden mt-4">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/10 blur-[80px] rounded-full pointer-events-none" />
+            <div className="relative w-full h-full flex gap-3 justify-center overflow-hidden">
+              {/* Column 1 - Scrolling Down */}
+              <motion.div
+                animate={{ y: [0, -1200] }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                className="flex flex-col gap-3 w-[47%] flex-shrink-0"
+              >
+                {[...col1, ...col1, ...col1].map((person, i) => (
+                  <div key={`mcol1-${i}`} className="relative rounded-2xl overflow-hidden flex-shrink-0 h-[180px] border border-primary/10">
+                    <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-2 left-2 right-2">
+                      <div className="flex items-center gap-1 mb-0.5">
+                        <img src={person.platform === 'linkedin' ? '/linkedin.png' : '/instas.png'} alt={person.platform === 'linkedin' ? 'LinkedIn' : 'Instagram'} className="w-5 h-5 rounded object-contain" />
+                        <span className="text-[9px] font-medium text-white/80">{person.followers}</span>
+                      </div>
+                      <p className="text-[10px] font-medium text-white truncate">{person.name}</p>
+                    </div>
                   </div>
-                  <p className="text-[10px] font-medium text-white truncate">{person.name}</p>
-                </div>
-              </div>
-            ))}
+                ))}
+              </motion.div>
+              {/* Column 2 - Scrolling Up */}
+              <motion.div
+                animate={{ y: [-1200, 0] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="flex flex-col gap-3 w-[47%] flex-shrink-0 pt-10"
+              >
+                {[...col2, ...col2, ...col2].map((person, i) => (
+                  <div key={`mcol2-${i}`} className="relative rounded-2xl overflow-hidden flex-shrink-0 h-[180px] border border-primary/10">
+                    <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-2 left-2 right-2">
+                      <div className="flex items-center gap-1 mb-0.5">
+                        <img src={person.platform === 'linkedin' ? '/linkedin.png' : '/instas.png'} alt={person.platform === 'linkedin' ? 'LinkedIn' : 'Instagram'} className="w-5 h-5 rounded object-contain" />
+                        <span className="text-[9px] font-medium text-white/80">{person.followers}</span>
+                      </div>
+                      <p className="text-[10px] font-medium text-white truncate">{person.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           </div>
 
           {/* Right Side - Animated columns, desktop only */}

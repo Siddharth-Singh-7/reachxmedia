@@ -78,8 +78,8 @@ export const FAQs = () => {
   return (
     <section id="faqs" className="py-20 bg-background relative z-10 overflow-hidden">
       <BGPattern variant="grid" mask="fade-edges" size={32} fill="rgba(255,255,255,0.03)" />
-      <div className="max-w-screen-2xl mx-auto px-8">
-        <div className="flex flex-col lg:flex-row gap-12">
+      <div className="max-w-screen-2xl mx-auto px-4 md:px-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
 
           {/* Left — FAQs */}
           <div className="w-full lg:w-[40%] min-w-0">
@@ -142,7 +142,7 @@ export const FAQs = () => {
               <div
                 id="my-cal-inline-30min"
                 className="rounded-2xl border border-white/10"
-                style={{ backgroundColor: '#121212', width: '100%', height: '560px', overflow: 'scroll' }}
+                style={{ backgroundColor: '#121212', width: '100%', height: '500px', overflow: 'scroll' }}
               />
             </motion.div>
           </div>

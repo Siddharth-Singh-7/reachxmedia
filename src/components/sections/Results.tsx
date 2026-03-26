@@ -29,7 +29,7 @@ const caseStudies = [
 export const Results = () => {
   return (
     <section id="results" className="py-32 px-6 bg-background relative z-10">
-      <div className="w-full px-40">
+      <div className="w-full px-4 md:px-16 lg:px-40">
         <div className="text-center mb-24">
           <h2 className="text-3xl md:text-6xl font-medium mb-6 tracking-tighter">
             Stories of our brands <br />

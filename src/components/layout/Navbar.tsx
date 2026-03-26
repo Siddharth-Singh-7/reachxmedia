@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Rocket, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ContactModal } from '@/components/ui/ContactModal';
 
@@ -51,12 +51,9 @@ export const Navbar = () => {
 
           {/* Center Logo */}
           <div
-            className="flex items-center gap-2 group cursor-pointer"
+            className="flex items-center cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="bg-primary p-2 rounded-lg group-hover:rotate-12 transition-transform">
-              <Rocket className="w-7 h-7 text-background" />
-            </div>
             <span className="text-2xl font-bold tracking-tight">
               Reach<span className="text-primary">X</span>Media<span className="text-primary">.</span>
             </span>
