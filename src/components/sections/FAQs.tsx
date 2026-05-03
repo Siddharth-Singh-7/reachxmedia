@@ -5,24 +5,24 @@ import { BGPattern } from '@/components/ui/bg-pattern';
 
 const faqs = [
   {
-    question: "What is the 100% refund policy exactly?",
-    answer: "Our 100% refund policy ensures that if we don't beat your current average views within the agreed timeframe, you get a full refund. No questions asked. We are confident in our results-driven strategy."
+    question: "Do you guarantee leads?",
+    answer: "No. Anyone who guarantees a fixed number of leads is either lying or desperate. We guarantee execution research, scripting, editing, posting, distribution. Authority is what we build. Leads are what authority produces."
   },
   {
-    question: "Who will create this content exactly?",
-    answer: "We have a dedicated team of content strategists, scriptwriters, production experts, and video editors. Each piece of content goes through a rigorous quality check to ensure it aligns with your brand's voice and goals."
+    question: "How long before I see results?",
+    answer: "Better content and positioning: week 2–3. Engagement shift: month 1. Inbound DMs and bookings: month 2–3, compounding from there.Want instant ROI? Run ads. Want a brand that brings clients to you for years? Give it 90 days."
   },
   {
-    question: "How long will it take to start posting content on my page?",
-    answer: "Typically, it takes about 10-14 days to complete the research, scripting, and production phases for your first batch of content. Once the initial cycle is established, we maintain a consistent posting schedule."
+    question: "Do I have to create content myself?",
+    answer: "You record. Once a month. That's it. Half a day, one time per month. We handle research, scripts, editing, posting, repurposing, distribution. We can't replace your face everything else is off your plate."
   },
   {
-    question: "Can I post this content on Youtube & Facebook too?",
-    answer: "Absolutely! While we optimize for Instagram, the high-quality video content we produce is perfect for YouTube Shorts, Facebook Reels, and TikTok. It's multi-platform ready content."
+    question: "What if this doesn't work for me?",
+    answer: "Define 'not work' Inconsistent posting, unprofessional content, weak positioning? That won't happen. We guarantee that part. The real risk isn't this not working. It's staying invisible for another 12 months and competing on price."
   },
   {
-    question: "Who will be my point of contact and how do I communicate with them?",
-    answer: "You will be assigned a dedicated Account Manager who will be your primary point of contact. Communication happens via Slack or WhatsApp groups for real-time updates and seamless collaboration."
+    question: "How is this different from freelancers or other agencies?",
+    answer: "Freelancers edit videos. Agencies post videos. We build authority. Most agencies sell deliverables. We sell a system research, positioning, messaging, distribution. The videos are just the output. And we don't take everyone. We work with founders who already have a real offer. We make experts un-ignorable."
   },
   {
     question: "My requirements are different from the listed package. Can you help me with that too?",

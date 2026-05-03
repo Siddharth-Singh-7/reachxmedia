@@ -61,7 +61,7 @@ const influencers = [
   {
     name: 'Sid Upadhyay',
     followers: '16.6K Followers',
-    image: '/Sid%20Upadhyay.png',
+    image: '/Sid%20Upadhyay1.png',
     height: 'h-[240px] sm:h-[280px] md:h-[320px]',
   },
 ];

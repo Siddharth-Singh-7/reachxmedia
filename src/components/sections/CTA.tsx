@@ -17,7 +17,7 @@ const podcastingPlans = [
     outcome: 'Explosive top-of-funnel awareness & reach.',
   },
   {
-    tag: 'SCALE',
+    tag: 'STARTER',
     description: 'For founders ready to turn content into a distribution machine.',
     features: [
       'Content audit + pre-production planning',
@@ -30,7 +30,7 @@ const podcastingPlans = [
     outcome: 'Predictable growth, authority building, consistent inbound.',
   },
   {
-    tag: 'LAUNCH',
+    tag: 'STANDARD',
     description: 'For founders ready to build an industry-leading podcast from scratch.',
     features: [
       'Pre-production (show concept, branding, positioning)',
@@ -95,7 +95,7 @@ export const CTA = () => {
               onClick={() => setTab('podcast')}
               className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${tab === 'podcast' ? 'bg-foreground text-background' : 'text-foreground/50 hover:text-foreground'}`}
             >
-              Podcasting
+              Authority Builder
             </button>
           </motion.div>
         </div>
@@ -112,15 +112,15 @@ export const CTA = () => {
             >
               <div className="mb-8">
                 <div className="inline-block px-4 py-1.5 rounded-lg bg-primary/20 border border-primary/30 mb-4">
-                  <span className="text-sm font-bold uppercase tracking-wider text-primary">Authority Engine™ - Growth</span>
+                  <span className="text-sm font-bold uppercase tracking-wider text-primary">Authority Engine - Growth</span>
                 </div>
-                <p className="text-foreground/70 text-base">For coaches & founders ready to scale discovery & authority.</p>
+                <p className="text-foreground/70 text-base">For coaches, consultant & business owners ready to scale discovery & authority.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
                 <div>
                   <h4 className="text-base font-bold text-white mb-4">What's included:</h4>
                   <ul className="space-y-3">
-                    {['Strategy ideation & scripting', '15-16 high-fidelity short-form video/month', 'Strategic content calendar + narrative design', 'Multi-platform distribution (IG, LinkedIn, YT Shorts)', 'Monthly growth tracking + optimization'].map((item, i) => (
+                    {['Strategy ideation & scripting', '18-20 post + short-form video/month', 'Strategic content calendar + narrative design', 'Multi-platform distribution (Instagram, Facebook, LinkedIn & Youtube)', 'Monthly growth tracking + optimization', 'Content scheduling calendar'].map((item, i) => (
                       <CheckItem key={i} text={item} />
                     ))}
                   </ul>
@@ -152,31 +152,51 @@ export const CTA = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.4 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-5"
+              className="glass-card rounded-3xl p-10 md:p-14 border border-white/10 shadow-2xl max-w-4xl mx-auto"
             >
-              {podcastingPlans.map((plan, i) => (
-                <div key={i} className="glass-card rounded-2xl p-7 border border-white/10 shadow-xl flex flex-col">
-                  <div className="inline-block px-3 py-1 rounded-md bg-primary/20 border border-primary/30 mb-4 self-start">
-                    <span className="text-xs font-bold uppercase tracking-wider text-primary">{plan.tag}</span>
-                  </div>
-                  <p className="text-foreground/70 text-sm mb-5 leading-relaxed">{plan.description}</p>
-                  <ul className="space-y-2.5 mb-6 flex-1">
-                    {plan.features.map((f, j) => (
-                      <CheckItem key={j} text={f} />
+              <div className="mb-8">
+                <div className="inline-block px-4 py-1.5 rounded-lg bg-primary/20 border border-primary/30 mb-2">
+                  <span className="text-sm font-bold uppercase tracking-wider text-primary">The Authority Builder</span>
+                </div>
+                
+                <p className="text-foreground/70 text-base">For coaches & founders ready to scale discovery & authority.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div>
+                  <h4 className="text-base font-bold text-white mb-4">Monthly Deliverables:</h4>
+                  <ul className="space-y-3">
+                    {[
+                      '12 short-form videos scripted, edited, caption-ready, platform-optimized',
+                      '2 long-form videos scripted and edited',
+                      'Basic content angle strategy (3 core authority topics defined in Month 1)',
+                      'Repurposing of long-form into 2 additional short-form clips',
+                      'Content scheduling calendar',
+                    ].map((item, i) => (
+                      <CheckItem key={i} text={item} />
                     ))}
                   </ul>
-                  <p className="text-sm text-foreground/60 mb-6">
-                    <span className="underline font-medium text-foreground/80">Outcome:</span> {plan.outcome}
-                  </p>
-                  <Button
-                    size="lg"
-                    className="w-full rounded-full h-12 text-sm font-bold bg-primary text-background hover:bg-primary/90 transition-all"
-                    onClick={handleGetStarted}
-                  >
-                    Get started
-                  </Button>
                 </div>
-              ))}
+                <div>
+                  <h4 className="text-base font-bold text-white mb-4">Outcome:</h4>
+                  <ul className="space-y-3">
+                    {[
+                      'Consistent presence across platforms without lifting a finger',
+                      'Build authority in your niche month over month',
+                      'Turn content into a reliable inbound lead source',
+                    ].map((item, i) => (
+                      <CheckItem key={i} text={item} />
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <Button
+                size="lg"
+                className="w-full rounded-full h-14 text-base font-black bg-primary text-background hover:bg-primary/90 transition-all group"
+                onClick={handleGetStarted}
+              >
+                Get started
+                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </motion.div>
           )}
         </AnimatePresence>
