@@ -8,9 +8,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="flex flex-col items-center md:items-start">
-            <div className="text-2xl font-black tracking-tighter mb-4">
-               Reach<span className="text-primary">X</span>Media<span className="text-primary">.</span>
-            </div>
+            <img src="/logo.png" alt="ReachXMedia" className="h-10 w-auto mb-4" />
             <p className="text-foreground/40 text-sm font-medium uppercase tracking-[0.2em]">
               © 2026. All Rights Reserved.
             </p>

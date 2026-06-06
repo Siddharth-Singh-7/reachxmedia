@@ -54,9 +54,7 @@ export const Navbar = () => {
             className="flex items-center cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <span className="text-2xl font-bold tracking-tight">
-              Reach<span className="text-primary">X</span>Media<span className="text-primary">.</span>
-            </span>
+            <img src="/logo.png" alt="ReachXMedia" className="h-9 w-auto" />
           </div>
 
           {/* Right Nav Links - Desktop */}
